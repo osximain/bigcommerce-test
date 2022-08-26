@@ -3,7 +3,10 @@
         {{> components/common/currency-selector}}
     {{/or}}
 
-    <p style="float: left; font-weight: bold; margin-top: 10px; font-size: 20px;">Welcome, {{customer.name}}</p>
+    {{#if customer.name}}
+        <p style="float: left; font-weight: bold; margin-top: 10px; font-size: 20px;">Welcome, {{customer.name}}</p>
+    {{/if}}
+
     <ul class="navUser-section navUser-section--alt">
         {{#if customer.store_credit.value '>' 0}}
             <li class="navUser-item">
